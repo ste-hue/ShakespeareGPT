@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Shakespeare GPT - Response</title>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <h1>Shakespeare GPT</h1>
+        <img src="{{ url_for('static', filename='images/ShakespeareGPT2.jpeg') }}" alt="Shakespeare">
+        <p>{{ generated_text }}</p>
+        <form action="{{ url_for('generate_text') }}" method="post">
+            <label for="prompt">Your next question or statement:</label>
+            <input type="text" id="prompt" name="prompt" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

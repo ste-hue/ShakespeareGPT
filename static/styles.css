@@ -1,0 +1,77 @@
+/* Basic styles for the body */
+body {
+    background-color: #999;
+    margin: 0;
+    height: 100vh; /* Set the body height to 100% of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/ShakespeareGPT2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+  }
+  
+.container {
+    position: relative;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Style the header */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #5a5a5a;
+    margin: 0;
+}
+
+/* Style the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the input and button */
+input, button {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
