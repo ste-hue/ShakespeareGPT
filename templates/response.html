@@ -1,22 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Shakespeare GPT - Response</title>
-</head>
-<body>
-    <div class="background-image"></div>
-    <div class="container">
-        <h1>Shakespeare GPT</h1>
-        <img src="{{ url_for('static', filename='images/ShakespeareGPT2.jpeg') }}" alt="Shakespeare">
-        <p>{{ generated_text }}</p>
-        <form action="{{ url_for('generate_text') }}" method="post">
-            <label for="prompt">Your next question or statement:</label>
-            <input type="text" id="prompt" name="prompt" required>
-            <button type="submit">Submit</button>
-        </form>
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="chat-container">
+  <div class="chat-header">
+    <h3>Chatting with Shakespeare</h3>
+    <img src="{{ url_for('static', filename='images/Willie.png') }}" alt="Shakespeare" class="shakespeare-img" style="width: 50px;">
+    <p>William</p>
+  </div>
+  <div class="chat-window">
+    <div class="chat-messages">
+      <div class="user-message">
+        <div class="message-bubble user-bubble">
+          You: {{ user_prompt }}
+        </div>
+        <div class="timestamp">{{ timestamp }}</div>
+      </div>
+      <div class="shakespeare-message">
+        <div class="message-bubble shakespeare-bubble">
+          William: {{ generated_text }}
+        </div>
+        <div class="timestamp">{{ timestamp }}</div>
+      </div>
     </div>
-</body>
-</html>
+  </div>
+  <form action="{{ url_for('generate_text') }}" method="post" class="chat-input">
+    <input type="text" id="input_text" name="input_text" placeholder="Type your message...">
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+  <div class="chat-footer">
+    <a href="{{ url_for('home') }}">Start Over</a>
+  </div>
+</div>
+{% endblock %}

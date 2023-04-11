@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Shakespeare GPT</title>
-</head>
-<body>
-    <div class="background-image"></div>
-    <div class="container">
-        <h1>Shakespeare GPT</h1>
-        <img src="{{ url_for('static', filename='images/ShakespeareGPT2.jpeg') }}" alt="Shakespeare">
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="background">
+    <div class="header">
+        <h1>ShakespeareGPT</h1>
+    </div>
+    <div class="content">
+        <img class="shakespeare" src="{{ url_for('static', filename='images/ShakespeareGPT2.jpeg') }}" alt="Shakespeare">
         <form action="{{ url_for('generate_text') }}" method="post">
-            <label for="prompt">Enter your text:</label>
-            <input type="text" id="prompt" name="prompt" required>
-            <button type="submit">Generate</button>
+            <label for="input_text">Talk to Shakespeare:</label>
+            <textarea name="input_text" id="input_text" rows="6" cols="40"></textarea>
+            <br>
+            <input type="submit" value="Generate">
         </form>
     </div>
-</body>
-</html>
+</div>
+{% endblock %}
