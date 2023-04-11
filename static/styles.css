@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #17191b;
 }
 
 .background {
@@ -8,7 +8,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
-    background-color: #fff;
+    background-color: #dcf3ea;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -26,6 +26,7 @@ body {
 .shakespeare {
     max-width: 100%;
     height: auto;
+
     display: block;
     margin: 0 auto;
 }
