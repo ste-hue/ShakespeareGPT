@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="home">
+    <div class="hero">
+        <img src="{% static '/image/shak1.png'%}" alt="">
+    </div>
+    <div class="content">
+        <h2>CHAT with the Bard OF AVON </h2>
+        <p>Say hi, ask a question, and let the wisdom of Shakespeare guide your conversation.</p>
+        <form action="/response/" method="post">
+            {% csrf_token %}
+            <textarea name="msg"  id="msg" name="msg"></textarea>
+            <button  class="homesubmit" type="submit"> <span>Dispatch thy words</span> <img src="{% static '/image/send.png'%}" alt=""> </button>
+        </form>
+    </div>
+</div>
+<script>
+
+</script>
+{% endblock content %}
