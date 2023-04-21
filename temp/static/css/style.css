@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400&family=Ubuntu:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+    font-family: 'Playfair Display SC', serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 428px;
+}
+
+/* header css  */
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+.social img {
+    width: 30px;
+}
+
+/* home css  */
+.home .content {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.home .content h2 {
+    color: #000000;
+    font-size: 20px;
+}
+
+.home .content p {
+    color: #2F2F2F;
+    font-size: 14px;
+    margin: 15px 0px;
+}
+
+.home .content textarea {
+    width: 80%;
+    margin: 0 auto;
+    height: 100px;
+    background: #CCCCCC;
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.home .content textarea:focus {
+    border: none;
+    outline: none;
+}
+
+.home .content .homesubmit {
+    cursor: pointer;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: #0097B2;
+    border-radius: 50px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 12px 15px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+/* response css  */
+.msgheader {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+}
+
+.msgheader .left {
+    display: flex;
+    gap: 15px;
+}
+
+.msgheader .left a img {
+    margin-top: 15px;
+}
+
+
+.msgheader .right {
+    display: flex;
+    gap: 15;
+}
+
+.msgheader .name h4 {
+    color: #fff;
+}
+
+.msgheader .name p {
+    color: #CCCCCC;
+}
+
+.msgbody {
+    background-color: #161616;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+#chat-window {
+    height: 320px;
+    overflow-y: auto;
+}
+
+.msgbody .list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.msgbody .text {
+    background-color: #2E2E2E;
+    border-radius: 15px 0px 15px 15px;
+    padding: 15px;
+    color: #fff;
+}
+
+
+
+.msgsendbox {
+    background-color: #E5E5E5;
+    display: flex;
+}
+
+.msgsendbox input {
+    width: 90%;
+    background-color: #E5E5E5;
+    border: none;
+    outline: none;
+    padding: 10px;
+
+}
+
+.msgsendbox:focus {
+
+    border: none;
+    outline: none;
+
+}
+
+.msgsendbox button {
+    width: 10%;
+    border: none;
+    outline: none;
+
+}
+
+.msgsendbox button:hover {
+    cursor: pointer;
+}
+
+.msgbody .sdetails {
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+
+.msgbody .sdetails .date {
+    color: #6e6e6e;
+    font-size: 14px;
+}
+
+.msgbody .sdetails .name {
+    color: #fff;
+    font-size: 14px;
+
+}
+
+.msgbody .list .img {
+    width: 15%;
+}
+
+/* .msgbody .list .img img {
+    width: 100%;
+} */
+
+
+.msgbody .list .msg {
+    width: 80%;
+    padding: 10px;
+}
+
+
+.msgbody .list .sdetails {
+    text-align: right;
+}
+
+.msgbody .text {
+    background-color: #2E2E2E;
+    border-radius: 0px 15px 15px 15px;
+    padding: 15px;
+    color: #fff;
+}
+
+.msgbody .list.shakp .img {
+    width: 15%;
+}
+
+/* .msgbody .list.shakp .img img {
+    width: 100%;
+} */
+
+
+.msgbody .list.shakp .msg {
+    width: 80%;
+    padding: 10px;
+}
+
+.msgbody .list.shakp .sdetails {
+    text-align: left;
+}
+
+.response .content {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.response .content h2 {
+    color: #000000;
+    font-size: 20px;
+}
+
+.response .content p {
+    color: #2F2F2F;
+    font-size: 14px;
+    margin: 15px 0px;
+}
+
+
+.response .content a {
+
+    color: #2F2F2F;
+    display: inline-block;
+    margin-top: 15px;
+
+}
