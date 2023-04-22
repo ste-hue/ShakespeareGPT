@@ -31,6 +31,5 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'ShakespeareGPT'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1A14DF7576E84CA1A5020D2258B42E73 }}
         package: '.'
