@@ -3,6 +3,7 @@ name: Deploy to Azure
 on:
   push:
     branches:
+      - main
       - new-main
 
 jobs:
@@ -22,9 +23,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Deploy to Azure Web App
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+       - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'ShakespeareGPT'
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1A14DF7576E84CA1A5020D2258B42E73 }}
         package: '.'
