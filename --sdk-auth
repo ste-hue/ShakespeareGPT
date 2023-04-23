@@ -1,0 +1,7 @@
+az ad sp create-for-rbac --name "MyAppServicePrincipal" --role contributor --scopes /subscriptions/b528c0ee-715f-4629-8021-742dbac07b94/resourceGroups/ShakespeareGPT_group --sdk-auth
+
+az ad sp create-for-rbac --name "MyAppServicePrincipal" --role contributor --scopes /subscriptions/b528c0ee-715f-4629-8021-742dbac07b94/resourceGroups/ShakespeareGPT_group --sdk-auth
+
+az login
+az ad sp create-for-rbac --name "MyAppServicePrincipal" --role contributor --scopes /subscriptions/b528c0ee-715f-4629-8021-742dbac07b94/resourceGroups/ShakespeareGPT_group --sdk-auth
+
