@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-%0$don$o2ne97li9hy7ddw7e)=11q!b(z8)ha$pjmstuj)3ju2
 DEBUG = True
 
 ALLOWED_HOSTS = ['shakespearegpt.azurewebsites.net','127.0.0.1', 'www.talktoshakespeare.com', '.azurewebsites.net']
-CSRF_TRUSTED_ORIGINS = ['https://shakespearegpt.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://shakespearegpt.azurewebsites.net', 'www.talktoshakespeare.com']
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 
 # Application definition
